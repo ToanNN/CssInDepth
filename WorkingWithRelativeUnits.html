@@ -44,6 +44,16 @@
             padding: 1.5em;
             border: 2px dashed yellow;
         }
+
+        /* To avoid shrinking text, define descendant rule */
+        ul {
+            font-size: 0.8em;
+        }
+
+        /* This fixes shrinking text */
+        ul ul {
+            font-size: 1em;
+        }
     </style>
 </head>
 <div class="padding">
@@ -67,6 +77,26 @@
     <p class="slogan">Ice cream loves us</p>
 </div>
 
+To avoid shrinking text, add a new nested rule
+<ul>
+    <li>Top level
+        <ul>
+            <li>Second level 1
+                <ul>
+                    <li>Third level 2
+                        <ul>
+                            <li>Fourth level 3
+                                <ul>
+                                    <li>Fifth level</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
 
 <body>
 
