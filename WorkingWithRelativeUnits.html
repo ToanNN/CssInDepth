@@ -35,6 +35,8 @@
 
         body {
             font-size: 16px;
+            /* Unitless line height */
+            line-height: 1.2;
         }
 
         .slogan {
@@ -52,6 +54,7 @@
         /* rem =root em */
         :root {
             font-size: 1em;
+            --main-font: Helvetica, Arial, sans-serif;
         }
 
         /* Use rem to avoid shrinking font size */
@@ -70,10 +73,12 @@
             font-size: 0.8rem;
             font-weight: bold;
             text-transform: uppercase;
+            /* Use variable */
+            font-family: var(--main-font);
         }
 
         :root {
-            font-size: 0.75em;
+            font-size: calc(0.5em + 1vw);
 
         }
 
