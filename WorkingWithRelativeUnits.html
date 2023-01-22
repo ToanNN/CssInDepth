@@ -46,13 +46,17 @@
         }
 
         /* To avoid shrinking text, define descendant rule */
-        ul {
-            font-size: 0.8em;
+
+
+        /* Using root node to define base value */
+        /* rem =root em */
+        :root {
+            font-size: 1em;
         }
 
-        /* This fixes shrinking text */
-        ul ul {
-            font-size: 1em;
+        /* Use rem to avoid shrinking font size */
+        ul {
+            font-size: 2rem;
         }
     </style>
 </head>
