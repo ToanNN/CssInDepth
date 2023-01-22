@@ -58,6 +58,43 @@
         ul {
             font-size: 2rem;
         }
+
+        .panel {
+            padding: 1em;
+            border-radius: 0.5em;
+            border: 1px solid #999;
+        }
+
+        .panel>h2 {
+            margin-top: 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        :root {
+            font-size: 0.75em;
+
+        }
+
+        @media (min-width: 800px) {
+            :root {
+                font-size: 0.875em;
+
+            }
+
+
+        }
+
+        @media (min-width: 1200px) {
+            :root {
+                font-size: 1em;
+
+
+            }
+
+            3
+        }
     </style>
 </head>
 <div class="padding">
@@ -101,6 +138,16 @@ To avoid shrinking text, add a new nested rule
         </ul>
     </li>
 </ul>
+
+<div class="panel">
+    <h2>Single-origin</h2>
+    <div class="panel-body">
+        We have built partnerships with small farms around the world to
+        hand-select beans at the peak of season. We then carefully roast
+        in <a href="/batch-size">small batches</a> to maximize their
+        potential.
+    </div>
+</div>
 
 <body>
 
