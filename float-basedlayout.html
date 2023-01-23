@@ -52,13 +52,7 @@
             margin: 0 auto;
         }
 
-        .media {
-            float: left;
-            width: 50%;
-            padding: 1.5em;
-            background-color: #eee;
-            border-radius: 0.5em;
-        }
+
 
         /* This to avoid margin collapse */
         .clearfix::before,
@@ -71,6 +65,21 @@
         /* Fix the floating size */
         .clearfix::after {
             clear: both;
+        }
+
+        .media {
+            float: left;
+            /* Make the element aligned on the top */
+            margin: 0 1.5em 1.5em 0;
+            width: calc(50% - 1.5em);
+            padding: 1.5em;
+            background-color: #eee;
+            border-radius: 0.5em;
+        }
+
+        /* Avoid float elements from catching */
+        .media:nth-child(odd) {
+            clear: left;
         }
     </style>
 </head>
