@@ -46,9 +46,31 @@
             border-radius: 0.5em;
         }
 
+        /* This inner container will center the contents */
         .container {
             max-width: 1080px;
             margin: 0 auto;
+        }
+
+        .media {
+            float: left;
+            width: 50%;
+            padding: 1.5em;
+            background-color: #eee;
+            border-radius: 0.5em;
+        }
+
+        /* This to avoid margin collapse */
+        .clearfix::before,
+        .clearfix::after {
+            /* Because margins don’t collapse through table-cell elements */
+            display: table;
+            content: '';
+        }
+
+        /* Fix the floating size */
+        .clearfix::after {
+            clear: both;
         }
     </style>
 </head>
@@ -61,7 +83,7 @@
 
         <main class="main clearfix">
             <h2>Running tips</h2>
-            <div>
+            <div class="clearfix">
                 <div class="media">
                     <img
                         src="runner.png"
@@ -121,8 +143,8 @@
                         </p>
                     </div>
                 </div>
-
             </div>
+
         </main>
     </div>
 
