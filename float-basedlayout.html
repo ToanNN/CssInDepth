@@ -81,6 +81,24 @@
         .media:nth-child(odd) {
             clear: left;
         }
+
+        .media-image {
+            float: left;
+            /* Adds a margin to the image to insert space between it and the body */
+            margin-right: 1.5em;
+        }
+
+        .media-body {
+            /* Remove the default lobotomized owl margin  */
+            margin-top: 0;
+            /* Establishes a new block formatting context so the body doesn’t overlap the floated image */
+            overflow: auto;
+        }
+
+        .media-body h4 {
+            /* verrides the top margin applied by user agent styles */
+            margin-top: 0;
+        }
     </style>
 </head>
 
