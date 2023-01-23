@@ -72,8 +72,22 @@
         }
 
         header {
-            padding-top: 2em;
-            padding-bottom: 2em;
+            padding: 1em 1.5em;
+        }
+
+        .button-link {
+            display: block;
+            padding: 0.5em;
+            color: #fff;
+            background-color: #0090C9;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        /* Add margin to the subsequent button not the first one */
+        .button-link+.button-link {
+            margin-top: 1em;
         }
     </style>
 </head>
@@ -92,8 +106,18 @@
             </p>
         </main>
         <aside class="sidebar">
-            <div class="widget"></div>
-            <div class="widget"></div>
+            <a
+                href="/twitter"
+                class="button-link"
+            >
+                follow us on Twitter
+            </a>
+            <a
+                href="/facebook"
+                class="button-link"
+            >
+                like us on Facebook
+            </a>
         </aside>
     </div>
 
