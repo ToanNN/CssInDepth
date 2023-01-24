@@ -79,11 +79,20 @@
         }
 
         /* Make the main column twice as big as the sidebar */
+        /* The shorthand declarations flex: 2 and flex: 1 set a flex basis of 0%, so 100% of the container’s width is the remainder (minus the 1.5 em margin between the two columns).
+         The remainder is then distributed to the two columns: two-thirds to the first column and the remaining third to the second */
         .column-main {
             flex: 2;
         }
 
         .column-sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .column-sidebar>.tile {
+            /* Applies flex-grow to the items within */
             flex: 1;
         }
     </style>
