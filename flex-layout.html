@@ -95,6 +95,63 @@
             /* Applies flex-grow to the items within */
             flex: 1;
         }
+
+        /* Style the login form */
+        .login-form h3 {
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        .login-form input:not([type=checkbox]):not([type=radio]) {
+            display: block;
+            /* Normally, display block elements automatically fill the available width, but <input> is a bit different. Its width is determined by the size attribute,  */
+            width: 100%;
+            margin-top: 0;
+        }
+
+        .login-form button {
+            margin-top: 1em;
+            border: 1px solid #cc6b5a;
+            background-color: white;
+            padding: .5em 1em;
+            cursor: pointer;
+        }
+
+        /* Styling prices */
+        .centered {
+            text-align: center;
+        }
+
+        .cost {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: .7;
+            margin: 1em 0;
+        }
+
+        .cost-currency {
+            font-size: 2rem;
+        }
+
+        .cost-dollars {
+            font-size: 4rem;
+        }
+
+        .cost-cents {
+            font-size: 1.5rem;
+            align-self: flex-start;
+
+        }
+
+        .cta-button {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            background-color: #cc6b5a;
+        }
     </style>
 </head>
 
