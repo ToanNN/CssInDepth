@@ -52,6 +52,7 @@
             left: 0;
             /* Uses a semi-transparent backdrop to obscure the rest of the page while the modal is open */
             background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
         }
 
         .modal-body {
@@ -65,6 +66,7 @@
             background-color: yellow;
             /* Allows the modal body to scroll, if necessary */
             overflow: auto;
+            z-index: 2;
         }
 
         .modal-close {
@@ -113,9 +115,21 @@
         }
 
         .dropdown-label {
-            padding: 0.5em 1.5em;
+            /* Increases the right padding to add space for the arrow */
+            padding: 0.5em 2em 0.5em 1.5em;
             border: 1px solid #ccc;
             background-color: #eee;
+        }
+
+        .dropdown-label::after {
+            content: "";
+            position: absolute;
+            /* Positions the element on the right side of the label */
+            right: 1em;
+            top: 1em;
+            border: 0.3em solid;
+            /* Uses the top border to form a down arrow */
+            border-color: black transparent transparent;
         }
 
         .dropdown-menu {
@@ -132,6 +146,12 @@
         /* Reveal the menu on hovering */
         .dropdown:hover .dropdown-menu {
             display: block;
+        }
+
+        .dropdown:hover .dropdown-label::after {
+            top: 0.7em;
+            /* On hover, changes to an up arrow */
+            border-color: transparent transparent black;
         }
 
         .submenu {
