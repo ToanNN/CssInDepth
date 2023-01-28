@@ -69,6 +69,35 @@
 
         .modal-close {
             cursor: pointer;
+            /* Abosolute, the position of an element depends on the distance to the left right top bottom  */
+            position: absolute;
+            top: 0.3em;
+            right: 0.3em;
+            padding: 0.3em;
+            font-size: 2em;
+            /* Make the button a small square */
+            height: 1em;
+            width: 1em;
+            /* Forces the text to overflow the element and hides it */
+            text-indent: 10em;
+            overflow: hidden;
+            border: 0;
+
+        }
+
+        /* after is the still inside the modal close */
+        .modal-close::after {
+            position: absolute;
+            line-height: 0.5;
+            top: 0.2em;
+            left: 0.1em;
+            text-indent: 0;
+            /* Adds the unicode character U+00D7 (multiplication sign) */
+            content: "\00D7";
+        }
+
+        button[type='submit'] {
+            float: right;
         }
     </style>
 </head>
