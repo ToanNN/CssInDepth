@@ -224,6 +224,64 @@
                 margin-left: 0.75em;
             }
         }
+
+        @media (min-width: 50em) {
+            .page-header {
+                padding: 1em 4em;
+            }
+        }
+
+        @media (min-width: 50em) {
+            .hero {
+                padding: 7em 6em;
+            }
+        }
+
+        @media (min-width: 50em) {
+            main {
+                padding: 2em 4em;
+            }
+        }
+
+        @media (min-width: 50em) {
+            .nav-menu {
+                padding: 0 4em;
+            }
+        }
+
+        @media (min-width: 50em) {
+            :root {
+                font-size: 1.125em;
+            }
+        }
+
+        /* Force table to display as blocks in mobile size */
+        table {
+            width: 100%;
+        }
+
+        @media (max-width: 30em) {
+
+            table,
+            thead,
+            tbody,
+            tr,
+            th,
+            td {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                margin-bottom: 1em;
+
+            }
+        }
     </style>
 </head>
 
