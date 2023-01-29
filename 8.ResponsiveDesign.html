@@ -53,6 +53,12 @@
             background-color: #fff;
         }
 
+        @media (min-width: 35em) {
+            .page-header {
+                padding: 1em;
+            }
+        }
+
         .title>h1 {
             color: #333;
             text-transform: uppercase;
@@ -75,8 +81,21 @@
             text-shadow: 0.1em 0.1em 0.3em #000;
         }
 
+        @media (min-width:35em) {
+            .hero {
+                padding: 5em 3em;
+                font-size: 1.2rem;
+            }
+        }
+
         main {
             padding: 1em;
+        }
+
+        @media (min-width:35em) {
+            main {
+                padding: 2em 1em;
+            }
         }
 
         .subtitle {
@@ -108,6 +127,17 @@
             text-indent: 5em;
             white-space: nowrap;
             overflow: hidden;
+        }
+
+        @media (min-width:35em) {
+            .menu-toggle {
+                display: none;
+            }
+
+            .menu-dropdown {
+                display: block;
+                position: static;
+            }
         }
 
         /* Overlays the button with a unicode symbol, the hamburger icon */
@@ -143,6 +173,28 @@
             color: #fff;
         }
 
+        @media (min-width:35em) {
+            .nav-menu {
+                display: flex;
+                border: 0;
+                padding: 0 1em;
+            }
+
+            .nav-menu>li {
+                flex: 1;
+            }
+
+            .nav-menu>li+li {
+                border: 0;
+            }
+
+            .nav-menu>li>a {
+                padding: 0.3em;
+                text-align: center;
+            }
+
+        }
+
         .nav-menu>li+li {
             border-top: 1px solid #ccc;
         }
@@ -157,6 +209,19 @@
         @media (min-width: 35em) {
             .title>h1 {
                 font-size: 2rem;
+            }
+
+            /* Create 3 column layout */
+            .row {
+                display: flex;
+                margin-left: -0.75em;
+                margin-right: -0.75em;
+            }
+
+            .column {
+                flex: 1;
+                margin-right: 0.75em;
+                margin-left: 0.75em;
             }
         }
     </style>
